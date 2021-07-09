@@ -1,0 +1,27 @@
+export const ADD_FIGURE = "ADD_FIGURE";
+export const ROLL = "ROLL";
+export const SAVE = "SAVE";
+export const SWITCH_PLAYER = "SWITCH_PLAYER";
+export const RESET_ROLL = "RESET_ROLL";
+export const CHANGE_STATE = "CHANGE_STATE";
+export const AVAILABLE_MOVES = "AVAILABLE_MOVES";
+export const MOVE_FIGURE = "MOVE_FIGURE";
+export const REMOVE_FIGURE = "REMOVE_FIGURE";
+export const INFO = "INFO";
+export const RESET = "RESET";
+export const LIGHT_ON = "LIGHT_ON";
+export const LIGHT_OFF = "LIGHT_OFF";
+
+export const addFigure = (player, spot) => ({ type: ADD_FIGURE, player, spot });
+export const roll = (value) => ({ type: ROLL, value });
+export const save = (player) => ({ type: SAVE, player });
+export const switchPlayer = () => ({ type: SWITCH_PLAYER });
+export const resetRoll = () => ({ type: RESET_ROLL });
+export const changeState = (player, state) => ({ type: CHANGE_STATE, player, state });
+export const setAvailableMoves = (player, moves) => ({ type: AVAILABLE_MOVES, player, moves });
+export const moveFigure = (player, from, to) => ({ type: MOVE_FIGURE, player, from, to });
+export const removeFigure = (player, field) => ({ type: REMOVE_FIGURE, player, field });
+export const setInfo = (player, info) => ({ type: INFO, player, info });
+export const reset = () => ({ type: RESET });
+export const lightOn = (player, target, probability) => ({ type: LIGHT_ON, player, target, probability });
+export const lightOff = () => ({ type: LIGHT_OFF });
